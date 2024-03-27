@@ -72,6 +72,83 @@ header {
     transform: translateY(2px);
 }
 
+/* navbar mobile */
+#navbar-icon {
+    display: none;
+}
+
+.navbar-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 20px;
+    width: 450px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    list-style: none;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    z-index: 100;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all linear .3s;
+    background-color: var(--white-color);
+}
+
+.navbar-mobile li>a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.navbar-item {
+    transition: all .25s linear;
+}
+
+.navbar-item:hover {
+    transform: translateX(20px);
+}
+
+.navbar-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.navbar-head span {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: fadeIn ease .3s;
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 main {
     margin-top: 88px;
 }
@@ -95,7 +172,6 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    flex-wrap: wrap;
     padding-bottom: 80px;
 }
 
@@ -123,6 +199,7 @@ main {
 .social-proof {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
@@ -161,7 +238,7 @@ main {
 }
 
 .product-menu {
-    width: 556px;
+    max-width: 556px;
     padding: 8px;
     background-color: var(--bg-gray-color);
     border-radius: 40px;
@@ -352,9 +429,25 @@ main {
     color: var(--second-color);
 }
 
+.feedback-slider {
+    overflow: hidden;
+}
+
 .feedback-list {
     display: flex;
     justify-content: space-between;
+    width: calc(33.33333333333333% * 10);
+    animation: scroll 50s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-33.33333333333333% * 2));
+    }
 }
 
 .feedback-item {
@@ -547,6 +640,7 @@ footer {
 
 .footer-socical {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
 }
 

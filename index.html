@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coffee shop</title>
     <!-- link icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- link styles css -->
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
     <div id="root">
         <header>
-            <div class="header">
+            <section class="header">
                 <a href="#" class="header-logo">
                     <img loading="lazy" src="./assets/images/logo.png" alt="Logo">
                 </a>
@@ -25,15 +26,39 @@
                     <a href="#testimonial" class="nav-link" title="Testimonial">Testimonial</a>
                     <a href="#contact" class="nav-link" title="Contact">Contact</a>
                 </nav>
-                <section class="header-action">
+                <div class="header-action">
                     <div class="header-icon">
                         <i class='bx bx-search'></i>
                     </div>
                     <div class="header-icon">
                         <i class='bx bx-shopping-bag'></i>
                     </div>
-                </section>
-            </div>
+                </div>
+                <div class="header-icon" id="navbar-icon">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </section>
+            <div id="overlay"></div>
+            <ul class="navbar-mobile">
+                <div class="navbar-head">
+                    <h3 class="navbar-title">Menu</h3>
+                    <span class="navbar-close">
+                        <i class='bx bx-x'></i>
+                    </span>
+                </div>
+                <li class="navbar-item">
+                    <a href="#product">Products</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#about">About us</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#testimonial">Testimonial</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
         </header>
         <main>
             <div class="container">
@@ -109,8 +134,7 @@
                                         <span>(360 reviews)</span>
                                     </div>
                                     <p class="product-desc">My delicious warm dark chocolate latte is made with real
-                                        chocolate, steamed milk, and two shots of freshly brewed espresso. This is the
-                                        perfect winter drink to keep you warm!</p>
+                                        chocolate, steamed milk, and two shots of freshly brewed espresso. </p>
                                     <div class="product-action">
                                         <span class="product-price">$2.9</span>
                                         <button><i class='bx bx-plus'></i></button>
@@ -380,17 +404,19 @@
                                 refreshment and energy.</p>
                             <p class="about-text">We commit that the sophistication and quality in every drop of coffee
                                 will make you remember forever. That's why our coffee is known as "the best".</p>
-                            <button class="btn">
-                                <span>Read More</span>
-                                <img loading="lazy" src="./assets/images/arrow.svg" alt="">
-                            </button>
+                            <div class="about-btn">
+                                <button class="btn">
+                                    <span>Read More</span>
+                                    <img loading="lazy" src="./assets/images/arrow.svg" alt="">
+                                </button>
+                            </div>
                         </div>
                         <div class="about-right">
                             <div class="about-img">
-                                <img src="./assets/images/coffee4.jpg" alt="">
+                                <img loading="lazy" src="./assets/images/coffee4.jpg" alt="">
                             </div>
                             <div class="about-img">
-                                <img src="./assets/images/coffee5.jpg" alt="">
+                                <img loading="lazy" src="./assets/images/coffee5.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -398,66 +424,216 @@
                 <section class="testimonial pt-80" id="testimonial">
                     <h3 class="sub-title">Testimonial</h3>
                     <h2 class="heading">What our buyers say</h2>
-                    <div class="feedback-list pt-80">
-                        <div class="feedback-item">
-                            <div class="feeback-user">
-                                <div class="feedback-avatar">
-                                    <img src="./assets/images/avatar1.jpg" alt="">
-                                </div>
-                                <div class="feeback-info">
-                                    <h3 class="feedback-name">Anh coder</h3>
-                                    <div class="feedback-rating">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
+                    <div class="feedback-slider">
+                        <div class="feedback-list pt-80">
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar1.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Anh coder</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="feeback-note">Delicious, rich coffee, comfortable space and great service.
+                                    This is
+                                    definitely the ideal destination for those who love coffee. 5 stars is not enough to
+                                    express my satisfaction. Will come back and recommend to friends!</p>
                             </div>
-                            <p class="feeback-note">Delicious, rich coffee, comfortable space and great service. This is
-                                definitely the ideal destination for those who love coffee. 5 stars is not enough to
-                                express my satisfaction. Will come back and recommend to friends!</p>
-                        </div>
-                        <div class="feedback-item">
-                            <div class="feeback-user">
-                                <div class="feedback-avatar">
-                                    <img src="./assets/images/avatar2.jpg" alt="">
-                                </div>
-                                <div class="feeback-info">
-                                    <h3 class="feedback-name">Verity</h3>
-                                    <div class="feedback-rating">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/unstar.svg" alt="">
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar2.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Verity</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/unstar.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="feeback-note">I was especially impressed with the rich coffee flavor and
+                                    professional service. However, I feel the seating space could be improved further to
+                                    create a more perfect experience. 4 stars for Ngopi and I
+                                    will
+                                    definitely be back!</p>
                             </div>
-                            <p class="feeback-note">I was especially impressed with the rich coffee flavor and
-                                professional service. However, I feel the seating space could be improved further to
-                                create a more perfect experience. Everything else is great. 4 stars for Ngopi and I will
-                                definitely be back!</p>
-                        </div>
-                        <div class="feedback-item">
-                            <div class="feeback-user">
-                                <div class="feedback-avatar">
-                                    <img src="./assets/images/avatar3.jpg" alt="">
-                                </div>
-                                <div class="feeback-info">
-                                    <h3 class="feedback-name">Michael Wong</h3>
-                                    <div class="feedback-rating">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
-                                        <img src="./assets/images/star.svg" alt="">
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar3.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Michael Wong</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="feeback-note">Loved every sip of coffee at Ngopi! Great taste, cozy space,
+                                    excellent service. Definitely 5 stars and will recommend to friends!</p>
                             </div>
-                            <p class="feeback-note">Loved every sip of coffee at Ngopi! Great taste, cozy space,
-                                excellent service. Definitely 5 stars and will recommend to friends!</p>
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar4.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Thomas Muller</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/unstar.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="feeback-note">Great coffee and comfortable cozy atmosphere at Ngopi, just
+                                    expected
+                                    faster service times. 4 stars and discount will be given!</p>
+                            </div>
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar5.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Avril Song</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="feeback-note">Perfect experience from space to coffee taste. Everything is
+                                    great,
+                                    5 stars is not enough to express my satisfaction. Will come back and recommend to
+                                    friends!</p>
+                            </div>
+
+                            <!-- same 5 item (double)  -->
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar1.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Anh coder</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="feeback-note">Delicious, rich coffee, comfortable space and great service.
+                                    This is
+                                    definitely the ideal destination for those who love coffee. 5 stars is not enough to
+                                    express my satisfaction. Will come back and recommend to friends!</p>
+                            </div>
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar2.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Verity</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/unstar.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="feeback-note">I was especially impressed with the rich coffee flavor and
+                                    professional service. However, I feel the seating space could be improved further to
+                                    create a more perfect experience. 4 stars for Ngopi and I
+                                    will
+                                    definitely be back!</p>
+                            </div>
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar3.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Michael Wong</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="feeback-note">Loved every sip of coffee at Ngopi! Great taste, cozy space,
+                                    excellent service. Definitely 5 stars and will recommend to friends!</p>
+                            </div>
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar4.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Thomas Muller</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/unstar.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="feeback-note">Great coffee and comfortable cozy atmosphere at Ngopi, just
+                                    expected
+                                    faster service times. 4 stars and discount will be given!</p>
+                            </div>
+                            <div class="feedback-item">
+                                <div class="feeback-user">
+                                    <div class="feedback-avatar">
+                                        <img loading="lazy" src="./assets/images/avatar5.jpg" alt="">
+                                    </div>
+                                    <div class="feeback-info">
+                                        <h3 class="feedback-name">Avril Song</h3>
+                                        <div class="feedback-rating">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                            <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="feeback-note">Perfect experience from space to coffee taste. Everything is
+                                    great,
+                                    5 stars is not enough to express my satisfaction. Will come back and recommend to
+                                    friends!</p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -467,7 +643,7 @@
                     <div class="blog-list pt-80">
                         <div class="blog-post">
                             <div class="blog-img">
-                                <img src="./assets/images/view-cf-shop1.jpg" alt="">
+                                <img loading="lazy" src="./assets/images/view-cf-shop1.jpg" alt="">
                             </div>
                             <div class="blog-info">
                                 <div class="blog-user">
@@ -487,7 +663,7 @@
                         </div>
                         <div class="blog-post">
                             <div class="blog-img">
-                                <img src="./assets/images/view-cf-shop2.jpg" alt="">
+                                <img loading="lazy" src="./assets/images/view-cf-shop2.jpg" alt="">
                             </div>
                             <div class="blog-info">
                                 <div class="blog-user">
@@ -508,7 +684,7 @@
                         </div>
                         <div class="blog-post">
                             <div class="blog-img">
-                                <img src="./assets/images/view-cf-shop3.jpg" alt="">
+                                <img loading="lazy" src="./assets/images/view-cf-shop3.jpg" alt="">
                             </div>
                             <div class="blog-info">
                                 <div class="blog-user">
@@ -542,7 +718,7 @@
                 <div class="footer-left">
                     <div class="footer-logo">
                         <div class="logo-img">
-                            <img src="./assets/images/logo-white.png" alt="">
+                            <img loading="lazy" src="./assets/images/logo-white.png" alt="">
                         </div>
                         <h2>Ngopi</h2>
                     </div>
