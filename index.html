@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- link icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- link styles css -->
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -16,7 +14,175 @@
 
 <body>
     <div id="root">
-        Hello world
+        <div class="container">
+            <header>
+                <div class="header-logo">
+                    <img loading="lazy" src="./assets/images/logo.png" alt="Logo">
+                </div>
+                <nav class="header-nav">
+                    <a href="" class="nav-link" title="Products">Products</a>
+                    <a href="" class="nav-link" title="About us">About us</a>
+                    <a href="" class="nav-link" title="Testimonial">Testimonial</a>
+                    <a href="" class="nav-link" title="Contact">Contact</a>
+                </nav>
+                <section class="header-action">
+                    <div class="header-icon">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <div class="header-icon">
+                        <i class='bx bx-shopping-bag'></i>
+                    </div>
+                </section>
+            </header>
+            <main>
+                <section class="content">
+                    <h1 class="heading-main pt-80">Enjoy Your Favorite
+                        Coffee with Ngopi</h1>
+                    <p class="content-desc">Discover tranquility at Ngopi a sanctuary for
+                        unwinding, where your evenings are perfected with relaxation and rich flavors.
+                    </p>
+                    <div class="content-btn">
+                        <button class="btn btn-sizeXL">
+                            <span>Explore product</span>
+                            <img loading="lazy" src="./assets/images/arrow.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="content-images pt-80">
+                        <div class="image-item">
+                            <img loading="lazy" src="./assets/images/coffee1.jpg" alt="">
+                        </div>
+                        <div class="image-item">
+                            <img loading="lazy" src="./assets/images/coffee2.jpg" alt="">
+                        </div>
+                        <div class="image-item">
+                            <img loading="lazy" src="./assets/images/coffee3.jpg" alt="">
+                        </div>
+                        <div class="image-item">
+                            <img loading="lazy" src="./assets/images/coffee4.jpg" alt="">
+                        </div>
+                        <div class="image-item">
+                            <img loading="lazy" src="./assets/images/coffee5.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+                <section class="social-proof">
+                    <div class="social-item">
+                        <span>30+</span>
+                        <span>Coffee Variant</span>
+                    </div>
+                    <div class="social-item">
+                        <span>20+</span>
+                        <span>Meeting room</span>
+                    </div>
+                    <div class="social-item">
+                        <span>25+</span>
+                        <span>Event space</span>
+                    </div>
+                    <div class="social-item">
+                        <span>40+</span>
+                        <span>Global Achievement</span>
+                    </div>
+                </section>
+                <section class="product pt-80">
+                    <h3 class="sub-title">Our products</h3>
+                    <h2 class="heading">From Top Quality Materials</h2>
+                    <div class="product-menu">
+                        <div class="menu-title active">Latte</div>
+                        <div class="menu-title">Robusta</div>
+                        <div class="menu-title">Acabica</div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img loading="lazy" src="./assets/images/product1.jpg" alt="">
+                            </div>
+                            <div class="product-content">
+                                <h3 class="product-title">Chocolate Latte</h3>
+                                <div class="product-reviews">
+                                    <div class="reviews-star">
+                                        <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        <span>4.9</span>
+                                    </div>
+                                    <span>(360 reviews)</span>
+                                </div>
+                                <p class="product-desc">My delicious warm dark chocolate latte is made with real
+                                    chocolate, steamed milk, and two shots of freshly brewed espresso. This is the
+                                    perfect winter drink to keep you warm!</p>
+                                <div class="product-action">
+                                    <span class="product-price">$2.9</span>
+                                    <button><i class='bx bx-plus'></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img loading="lazy" src="./assets/images/product2.jpg" alt="">
+                            </div>
+                            <div class="product-content">
+                                <h3 class="product-title">Mocha Latte</h3>
+                                <div class="product-reviews">
+                                    <div class="reviews-star">
+                                        <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span>(490 reviews)</span>
+                                </div>
+                                <p class="product-desc">Mocha Latte is a harmonious blend of quality coffee, fragrant
+                                    milk and rich dark chocolate, providing a delicious and authentic coffee experience.
+                                </p>
+                                <div class="product-action">
+                                    <span class="product-price">$2.7</span>
+                                    <button><i class='bx bx-plus'></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img loading="lazy" src="./assets/images/product3.jpg" alt="">
+                            </div>
+                            <div class="product-content">
+                                <h3 class="product-title">Coffee Latte</h3>
+                                <div class="product-reviews">
+                                    <div class="reviews-star">
+                                        <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        <span>4.8</span>
+                                    </div>
+                                    <span>(420 reviews)</span>
+                                </div>
+                                <p class="product-desc">Cafe latte has an eye-catching shape and has a richer coffee
+                                    flavor than milk.
+                                </p>
+                                <div class="product-action">
+                                    <span class="product-price">$2.9</span>
+                                    <button><i class='bx bx-plus'></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-img">
+                                <img loading="lazy" src="./assets/images/product4.jpg" alt="">
+                            </div>
+                            <div class="product-content">
+                                <h3 class="product-title">Hazelnut Latte</h3>
+                                <div class="product-reviews">
+                                    <div class="reviews-star">
+                                        <img loading="lazy" src="./assets/images/star.svg" alt="">
+                                        <span>4.9</span>
+                                    </div>
+                                    <span>(190 reviews)</span>
+                                </div>
+                                <p class="product-desc">This hazelnut latte is super simple to make and perfect for
+                                    those days when you need something a little extra special.</p>
+                                <div class="product-action">
+                                    <span class="product-price">$2.8</span>
+                                    <button><i class='bx bx-plus'></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
     <script src="./assets/js/main.js"></script>
 </body>

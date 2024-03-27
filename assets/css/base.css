@@ -2,9 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
-/* font-family: "Playfair Display", serif;
-  font-optical-sizing: auto; */
+:root {
+    --primary-color: #6D1600;
+    --second-color: #282A3A;
+    --title-color: #868890;
+    --text-color: rgba(40, 42, 58, 0.7);
+    --white-color: #FFF;
+    --border-color: #D9D9D9;
+    --bg-gray-color: #f6f6f6;
+    --star-color: #FFB31F;
+}
 
 *,
 *:before,
@@ -42,7 +49,6 @@ button {
 
 html {
     font-size: 62.5%;
-    line-height: 1.6rem;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
@@ -52,4 +58,90 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1;
+    padding: 0 15px;
+    background-color: var(--white-color);
+}
+
+/* common style */
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.heading-main {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    line-height: 1.20;
+    color: var(--second-color);
+    font-weight: 500;
+    font-size: 6.4rem;
+    max-width: 563px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.heading {
+    font-family: "Playfair Display", serif;
+    margin-top: 8px;
+    font-size: 3.6rem;
+    line-height: 1.2;
+    color: var(--second-color);
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: var(--title-color);
+    text-align: center;
+}
+
+.btn {
+    position: relative;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    min-width: 280px;
+    height: 82px;
+    line-height: 8.2rem;
+    background-color: var(--primary-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: var(--white-color);
+    font-size: 2.4rem;
+    padding: 0 12px;
+    border-radius: 0 32px 0 32px;
+}
+
+.btn::before,
+.btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    opacity: 0.05;
+    z-index: -1;
+    transition: all .6s cubic-bezier(.165, .84, .44, 1);
+}
+
+.btn:hover::before,
+.btn:hover::after {
+    left: auto;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.btn.btn-sizeXL {
+    min-width: 363px;
 }
