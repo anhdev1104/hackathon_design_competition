@@ -162,7 +162,7 @@ header {
     justify-content: center;
     border-radius: 40px;
     padding: 16px 40px;
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: var(--text-color);
     width: 180px;
     cursor: pointer;
@@ -177,6 +177,11 @@ header {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-top: 40px;
+    display: none;
+}
+
+.product-list.active {
+    display: grid;
 }
 
 .product-item {
@@ -270,4 +275,55 @@ header {
 
 .product-action button i {
     font-size: 2rem;
+}
+
+/* ABOUT */
+.about {
+    padding-bottom: 80px;
+    color: var(--second-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-left {
+    width: 50%;
+}
+
+.about-right {
+    width: 50%;
+    display: flex;
+    gap: 24px;
+}
+
+.about-text {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.about-img {
+    width: 288px;
+    height: 378px;
+    overflow: hidden;
+}
+
+.about-img:first-child {
+    border-radius: 0 120px 0 120px;
+    transform: translateY(64px);
+}
+
+.about-img:last-child {
+    border-radius: 120px 0 120px 0;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
