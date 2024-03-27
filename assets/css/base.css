@@ -58,15 +58,15 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1;
-    padding: 0 15px;
     background-color: var(--white-color);
 }
 
 /* common style */
 .container {
-    max-width: 1280px;
+    max-width: 1295px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .pt-80 {
