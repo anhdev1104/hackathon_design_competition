@@ -102,4 +102,38 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
+
+    /* .form-group i {
+        display: none;
+    } */
+
+    .form-group input {
+        flex: unset;
+        width: auto;
+    }
+
+    .form-group button {
+        display: none;
+    }
+
+    .btn.btn-sizeXL {
+        min-width: unset;
+        gap: 5px;
+        font-size: 2rem;
+    }
+
+    .social-proof {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+    }
+
+    .social-item {
+        padding: 0;
+        width: unset;
+    }
+
+    .social-item span:last-child {
+        font-size: 2rem;
+    }
 }
